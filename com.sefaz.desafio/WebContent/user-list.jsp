@@ -3,11 +3,11 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
- <title>User Management Application</title>
+ <title>List_user</title>
 </head>
 <body>
  <center>
-  <h1>User Management</h1>
+  <h1>Lista de usuários</h1>
         <h2>
          <a href="new">Add New User</a>
          &nbsp;&nbsp;&nbsp;
