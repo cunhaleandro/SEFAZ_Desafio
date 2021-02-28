@@ -6,14 +6,15 @@ import java.util.List;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import com.sefaz.desafio.dao.UserDao;
 import com.sefaz.desafio.model.User;
 
 @WebServlet("/")
-public class UserServlet {
-	private static final long serialVersionUID = 1L;
+public class UserServlet extends HttpServlet {
+    private static final long serialVersionUID = 1L;
     private UserDao userDao;
 
     public void init() {
@@ -83,8 +84,8 @@ public class UserServlet {
     throws SQLException, IOException {
         String name = request.getParameter("name");
         String email = request.getParameter("email");
-        User newUser = new User(name, email);
-        
+        String phone = request.getParameter("phone");
+        User newUser = new User(name, email,phone);
         userDao.saveUser(newUser);
         response.sendRedirect("list");
     }
@@ -94,8 +95,9 @@ public class UserServlet {
         int id = Integer.parseInt(request.getParameter("id"));
         String name = request.getParameter("name");
         String email = request.getParameter("email");
+        String phone = request.getParameter("phone");
 
-        User user = new User(id, name, email);
+        User user = new User(id, name, email, phone);
         userDao.updateUser(user);
         response.sendRedirect("list");
     }

@@ -3,11 +3,11 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
- <title>List_user</title>
+ <title>User Management Application</title>
 </head>
 <body>
  <center>
-  <h1>Lista de usuários</h1>
+  <h1>User Management</h1>
         <h2>
          <a href="new">Add New User</a>
          &nbsp;&nbsp;&nbsp;
@@ -22,6 +22,7 @@
                 <th>ID</th>
                 <th>Name</th>
                 <th>Email</th>
+                <th>Phone</th>
                 <th>Actions</th>
             </tr>
             <c:forEach var="user" items="${listUser}">
@@ -29,6 +30,7 @@
                     <td><c:out value="${user.id}" /></td>
                     <td><c:out value="${user.name}" /></td>
                     <td><c:out value="${user.email}" /></td>
+                    <td><c:out value="${user.phone}" /></td>
                     <td>
                      <a href="edit?id=<c:out value='${user.id}' />">Edit</a>
                      &nbsp;&nbsp;&nbsp;&nbsp;
