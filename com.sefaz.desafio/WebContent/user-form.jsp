@@ -37,7 +37,7 @@
            <input type="hidden" name="id" value="<c:out value='${user.id}' />" />
           </c:if>            
             <tr>
-                <th>User Name: </th>
+                <th> Nome: </th>
                 <td>
                  <input type="text" name="name" size="45"
                    value="<c:out value='${user.name}' />"
@@ -45,10 +45,18 @@
                 </td>
             </tr>
             <tr>
-                <th>User Email: </th>
+                <th> E-mail: </th>
                 <td>
                  <input type="text" name="email" size="45"
                    value="<c:out value='${user.email}' />"
+                 />
+                </td>
+            </tr>
+            <tr>
+                <th>Telefone </th>
+                <td>
+                 <input type="text" name="phone" size="45"
+                   value="<c:out value='${user.phone}' />"
                  />
                 </td>
             </tr>
