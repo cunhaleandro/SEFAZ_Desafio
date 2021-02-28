@@ -16,22 +16,26 @@ import javax.persistence.Id;
 	 
 	 protected String email;
 	 
+	 protected String phone;
+	 
 
 	 public User() {
 	 }
 	 
-	 public User(String name, String email) {
+	 public User(String name, String email, String phone) {
 	  super();
 	  this.name = name;
 	  this.email = email;
+	  this.phone = phone;
 	  
 	 }
 
-	 public User(int id, String name, String email) {
+	 public User(int id, String name, String email, String phone) {
 	  super();
 	  this.id = id;
 	  this.name = name;
 	  this.email = email;
+	  this.phone = phone;
 	  
 	 }
 
@@ -57,6 +61,14 @@ import javax.persistence.Id;
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+
+	public String getPhone() {
+		return phone;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
 	}
 
 }
