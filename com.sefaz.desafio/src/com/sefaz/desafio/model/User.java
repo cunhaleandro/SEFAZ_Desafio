@@ -18,15 +18,18 @@ import javax.persistence.Id;
 	 
 	 protected String phone;
 	 
+	 protected String pass;
+	 
 
 	 public User() {
 	 }
 	 
-	 public User(String name, String email, String phone) {
+	 public User(String name, String email, String phone, String pass) {
 	  super();
 	  this.name = name;
 	  this.email = email;
 	  this.phone = phone;
+	  this.pass = pass;
 	  
 	 }
 
@@ -38,6 +41,15 @@ import javax.persistence.Id;
 	  this.phone = phone;
 	  
 	 }
+	 
+	public User(int id, String name, String email, String phone, String pass) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.email = email;
+		this.phone = phone;
+		this.pass = pass;
+	}
 
 	public int getId() {
 		return id;
@@ -69,6 +81,14 @@ import javax.persistence.Id;
 
 	public void setPhone(String phone) {
 		this.phone = phone;
+	}
+
+	public String getPass() {
+		return pass;
+	}
+
+	public void setPass(String pass) {
+		this.pass = pass;
 	}
 
 }

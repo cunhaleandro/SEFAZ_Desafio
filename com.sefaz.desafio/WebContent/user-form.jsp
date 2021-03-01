@@ -9,8 +9,7 @@
  <center>
   <h1>User Management</h1>
         <h2>
-         <a href="new">Add New User</a>
-         &nbsp;&nbsp;&nbsp;
+         
          <a href="list">List All Users</a>
          
         </h2>
@@ -57,6 +56,14 @@
                 <td>
                  <input type="text" name="phone" size="45"
                    value="<c:out value='${user.phone}' />"
+                 />
+                </td>
+            </tr>
+               <tr>
+                <th>Senha </th>
+                <td>
+                 <input type="text" name="phone" size="45"
+                   value="<c:out value='${user.pass}' />"
                  />
                 </td>
             </tr>

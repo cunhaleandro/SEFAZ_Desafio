@@ -7,6 +7,7 @@ import org.hibernate.Transaction;
 import com.sefaz.desafio.model.User;
 import com.sefaz.desafio.utils.HibernateUtil;
 
+
 public class UserDao {
 	
 	//Cria um novo usuário
