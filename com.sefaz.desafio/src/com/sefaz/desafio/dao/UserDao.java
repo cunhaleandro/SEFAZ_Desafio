@@ -10,7 +10,7 @@ import com.sefaz.desafio.utils.HibernateUtil;
 
 public class UserDao {
 	
-	//Cria um novo usuário
+	//Cria um novo usuário no banco
 	
 	public void saveUser(User user) {
         Transaction transaction = null;
